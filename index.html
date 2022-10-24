@@ -54,7 +54,7 @@
 
             <div class="col-sm-6 position-relative">
               <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" required>
+              <input type="password" class="form-control" id="password1" minlength="6" required>
               <div class="valid-tooltip">
                 todo bien
               </div>
@@ -65,7 +65,7 @@
 
             <div class="col-sm-6 position-relative">
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" required>
+              <input type="password" class="form-control" id="password2" minlength="6" required>
               <div class="valid-tooltip">
                 todo bien
               </div>
@@ -83,6 +83,29 @@
                 <div class="invalid-tooltip">
                   todo mal
                 </div>
+            </div>
+
+            <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5">Términos y condiciones del servicio.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quasi sapiente voluptatum deserunt?
+                      Deleniti, adipisci vitae in quaerat eius nemo optio? Quas at magni saepe cumque. Delectus perspiciatis omnis
+                      accusamus.</p>
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="terminos" required>
+                      <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
 
@@ -103,27 +126,7 @@
     </footer>
   </div>
 
-  <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5">Términos y condiciones del servicio.</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quasi sapiente voluptatum deserunt?
-            Deleniti, adipisci vitae in quaerat eius nemo optio? Quas at magni saepe cumque. Delectus perspiciatis omnis
-            accusamus.</p>
-        </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos">
-            <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/validacion.js"></script>
