@@ -23,7 +23,7 @@
               <label for="nombre" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="nombre" required>
               
-              <div class="invalid-tooltip">
+              <div class="invalid-feedback">
                 Debe ingresar un nombre
               </div>
               <div class="valid-feedback">
@@ -34,8 +34,7 @@
             <div class="col-sm-6 position-relative">
               <label for="apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="apellido" required>
-             
-              <div class="invalid-tooltip">
+              <div class="invalid-feedback">
                 Debe ingresar un apellido
               </div>
             </div>
@@ -43,8 +42,7 @@
             <div class="col-12 position-relative">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" required>
-             
-              <div class="invalid-tooltip">
+              <div class="invalid-feedback">
                 Debe ingresar un e-mail valido
               </div>
             </div>
@@ -52,29 +50,26 @@
             <div class="col-sm-6 position-relative">
               <label for="password1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="password1" minlength="6" required>
-             
-              <div class="invalid-tooltip">
+              <div class="invalid-feedback">
                 Debe ingregar una contraseña de al menos 6 caracteres 
               </div>
-              
             </div>
 
             <div class="col-sm-6 position-relative">
               <label for="password2" class="form-label">Repetir contraseña</label>
               <input type="password" class="form-control" id="password2"  required>
-         
-              <div class="invalid-tooltip">
+              <div class="invalid-feedback">
                 Deben ser iguales las contraseñas 
               </div>
             </div>
 
             <div class="col-sm-12 position-relative">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
+              <button type="button" id="terminosBtn" class="btn btn-link ps-0" data-bs-toggle="modal"
                 data-bs-target="#modalTerminos">Términos del servicio</button>
-               
-                <div class="invalid-tooltip">
-                  todo mal
+                <div class="invalid-feedback">
+                  Debe aceptar los términos y condiciones del servicio
                 </div>
+                
             </div>
 
             <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
@@ -93,7 +88,6 @@
                   <div class="modal-footer">
                     <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="terminos" required>
-                      
                       <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
                     </div>
                   </div>

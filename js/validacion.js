@@ -16,6 +16,8 @@ const formulario = {
   terminos,
 };
 
+const terminosBtn = document.getElementById("terminosBtn");
+
 function inicializarFormulario(form) {
   ids.forEach((id) => {
     formulario[id] = form[id];
@@ -25,11 +27,17 @@ function inicializarFormulario(form) {
 function arePasswordsEqual() {
   const { password1, password2 } = formulario;
   if (password1.value === password2.value) {
-
     formulario["password2"].setCustomValidity("");
   } else {
- 
     formulario["password2"].setCustomValidity("Las contraseñas no coinciden");
+  }
+}
+
+function terminosValidacion() {
+  if (formulario.terminos.checked) {
+    terminosBtn.classList.remove("is-invalid");
+  } else {
+    terminosBtn.classList.add("is-invalid");
   }
 }
 
@@ -47,7 +55,9 @@ function arePasswordsEqual() {
       "submit",
       (event) => {	
         formulario.password1.addEventListener("input", arePasswordsEqual);
-        formulario.password2.addEventListener("input", arePasswordsEqual)
+        formulario.password2.addEventListener("input", arePasswordsEqual);
+        formulario.terminos.addEventListener("change", terminosValidacion);
+
         console.log(formulario);
         if (!form.checkValidity()) {
           event.preventDefault();
