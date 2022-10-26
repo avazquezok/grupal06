@@ -25,10 +25,10 @@ function inicializarFormulario(form) {
 function arePasswordsEqual() {
   const { password1, password2 } = formulario;
   if (password1.value === password2.value) {
-    formulario["password1"].setCustomValidity("");
+
     formulario["password2"].setCustomValidity("");
   } else {
-    formulario["password1"].setCustomValidity("Las contraseñas no coinciden");
+ 
     formulario["password2"].setCustomValidity("Las contraseñas no coinciden");
   }
 }
