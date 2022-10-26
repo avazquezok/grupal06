@@ -36,8 +36,10 @@ function arePasswordsEqual() {
 function terminosValidacion() {
   if (formulario.terminos.checked) {
     terminosBtn.classList.remove("is-invalid");
+    terminosBtn.classList.remove("text-danger");
   } else {
     terminosBtn.classList.add("is-invalid");
+    terminosBtn.classList.add("text-danger");
   }
 }
 
