@@ -57,6 +57,7 @@ function terminosValidacion() {
         formulario.password1.addEventListener("input", arePasswordsEqual);
         formulario.password2.addEventListener("input", arePasswordsEqual);
         formulario.terminos.addEventListener("change", terminosValidacion);
+        terminosValidacion();
 
         console.log(formulario);
         if (!form.checkValidity()) {
