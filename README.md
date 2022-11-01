@@ -1,4 +1,4 @@
-# Trabajo Grupal 06 - Grupo 6
+# Trabajo Grupal 06 - Grupo 3
 
 * Iván Arriola
 * Agustin Vazquez
